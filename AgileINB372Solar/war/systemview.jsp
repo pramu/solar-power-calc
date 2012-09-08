@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.inb372.project.BusinessTire"%>
+<%@ page import="com.inb372.project.BusinessTier"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -42,11 +42,19 @@ System Detail:
 <th>Size</th>
 <th>Detail</th>
 </tr>
-<%for(int i = 0; i <BusinessTire.GetSystemListSize(); i++){ %>
+<%
+	for(int i = 0; i <BusinessTier.GetSystemListSize(); i++){
+%>
 	<tr>
-		<td><% out.print("$"+BusinessTire.GetSystemTotal(i)); %></td>
-		<td><% out.print(BusinessTire.GetSystemSize(i)+"KW"); %></td>
-		<%long name=BusinessTire.GetSystemID(i);%>
+		<td><%
+			out.print("$"+BusinessTier.GetSystemTotal(i));
+		%></td>
+		<td><%
+			out.print(BusinessTier.GetSystemSize(i)+"KW");
+		%></td>
+		<%
+			long name=BusinessTier.GetSystemID(i);
+		%>
 		<td><a href=panelview.jsp?Detail=<%=name%>>Detail</a></td>
 	</tr>
 <% } %>

@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.inb372.project.BusinessTire"%>
+<%@ page import="com.inb372.project.BusinessTier"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,17 +35,18 @@
 
 </div>
 
-<form name = "calculatetor" method="post" action = "/calculatorAct" id = "calculatetor" onsubmit = "return Validate()" onreset = "resetBtn()"> 
+<form name = "calculator" method="post" action = "/calculatorAct" id = "calculator" onsubmit = "return Validate()" onreset = "resetBtn()"> 
  
-<div  class = "calculatetorForm">
+<div  class = "calculatorForm">
+<h1>Calculation Result</h1>
 <pre>
- RESULT~~~~~
- 
- Gragh!!!!!! go's here
- this is the system Cost <% out.print(BusinessTire.GetSystemCost()); %>
+You require a system of a minimum size <%
+ double systemSizeKw = (Double)request.getSession().getAttribute("systemSizeKw");	
+ out.print(systemSizeKw);
+	request.getSession().removeAttribute("systemSizeKw");%> kw.
  
  <center>  
-<input type="submit" value="Submit"> <input type="reset">
+<input type="submit" value="Back"> 
 </center>
 </pre>
 </div>

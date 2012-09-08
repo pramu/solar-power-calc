@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.inb372.project.BusinessTire"%>
+<%@ page import="com.inb372.project.BusinessTier"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,8 +35,10 @@
 
 </div>
 
-System ID: <%String panelID = request.getParameter("Detail");
-			 out.print(panelID);%></br>
+System ID: <%
+	String panelID = request.getParameter("Detail");
+	 out.print(panelID);
+%></br>
 Panel Detail:
 <table border="1">
 <tr>
@@ -45,13 +47,25 @@ Panel Detail:
 <th>Size</th>
 <th>Quentity</th>
 </tr>
-<%for(int i = 0; i < BusinessTire.GetPanelListSize(); i++){%>
-	<%if(BusinessTire.GetPanelSystemID(i).equals(panelID)){ %>
+<%
+	for(int i = 0; i < BusinessTier.GetPanelListSize(); i++){
+%>
+	<%
+		if(BusinessTier.GetPanelSystemID(i).equals(panelID)){
+	%>
 	<tr>
-		<td><% out.print("$"+BusinessTire.GetPanelPrice(i)); %></td>
-		<td><% out.print(BusinessTire.GetPanelEfficency(i)+"%"); %></td>
-		<td><% out.print(BusinessTire.GetPanelSize(i)); %></td>
-		<td><% out.print(BusinessTire.GetPanelQuentity(i)); %></td>
+		<td><%
+			out.print("$"+BusinessTier.GetPanelPrice(i));
+		%></td>
+		<td><%
+			out.print(BusinessTier.GetPanelEfficency(i)+"%");
+		%></td>
+		<td><%
+			out.print(BusinessTier.GetPanelSize(i));
+		%></td>
+		<td><%
+			out.print(BusinessTier.GetPanelQuentity(i));
+		%></td>
 	</tr>
 	<%}%>
 <%}%>

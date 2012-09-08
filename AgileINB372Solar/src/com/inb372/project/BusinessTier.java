@@ -13,7 +13,40 @@ import com.google.appengine.api.datastore.EntityNotFoundException;
 import com.inb372.datastore.CalculatorDataStore;
 import com.inb372.datastore.SystemDataStore;
 
-public class BusinessTire {
+public class BusinessTier {
+	
+	
+	public static double calculateMinKw(double savings, double avgDailyHoursSun, double dayTimeHourlyUsage, double tariff, double feedInFee){
+		double systemSizeKw;
+		//double tariff = 0.1941;
+		//double avgDailyHoursSun = 4.5;
+		//double feedInFee = 0.05;
+		double replacementGeneration = avgDailyHoursSun * dayTimeHourlyUsage;
+		double exportedGenKw;
+		
+		
+		exportedGenKw = (((savings / 365) - (replacementGeneration * tariff)) / feedInFee);
+		
+		systemSizeKw = ((replacementGeneration + exportedGenKw) / replacementGeneration);
+		if (systemSizeKw < 0){
+			systemSizeKw = 0.01;
+		}
+		return systemSizeKw;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	//Calculator inputs from user
 	private static String systemCost = "systemCost";
@@ -115,5 +148,5 @@ public class BusinessTire {
 	public static String GetPanelQuentity(int num){
 		return SystemList().get(num).GetPanelQuentity();
 	}
-
+	
 }

@@ -49,7 +49,7 @@ public class CalculatorDataStore{
     public String GetSystemSize(){
     	return _systemSize;
     }
-    public DatastoreService GetDatastroeService(){
+    public DatastoreService getDatastoreService(){
 		return this.dataSv;
 	}
 }

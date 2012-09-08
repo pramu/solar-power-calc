@@ -34,11 +34,30 @@
 
 </div>
 
-<form name = "calculatetor" method="post" action = "/calculatorAct" id = "calculatetor" onsubmit = "return Validate()" onreset = "resetBtn()"> 
-<div  class = "calculatetorForm">
+<form name = "calculator" method="post" action = "/calculatorAct" id = "calculator" onsubmit = "return Validate()" onreset = "resetBtn()"> 
+<div  class = "calculatorForm">
 <pre>
-     System Cost: <input type="text" name="systemCost" id ='systemCost' placeholder="ex)18000" size="25" onchange = "checkSystemCostFunction(this)"><span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
- System Size(KW): <input type="text" name="systemSize" id ='systemSize'  size="25" placeholder="ex)30.2" onchange = "checkSystemSizeFunction(this)"><span id='systemSizeErrorMessage'> </span>
+     Savings: 
+     <input type="text" name="savings" id ='savings' placeholder="eg: 500" size="25" >
+     <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
+          
+     AvgDailyHoursSun: 
+     <input type="text" name="avgDailyHoursSun" id ='avgDailyHoursSun' placeholder="eg: 500" size="25" value="4.5" readonly="True">
+     <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
+     
+     DayTimeHourlyUsage: 
+     <input type="text" name="dayTimeHourlyUsage" id ='dayTimeHourlyUsage' placeholder="eg: 500" size="25" value="1" readonly="True">
+     <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
+     
+     
+     Tariff: 
+     <input type="text" name="tariff" id ='tariff' placeholder="eg: 500" size="25" value="0.1941" readonly="True">
+     <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
+     
+     FeedInFee: 
+     <input type="text" name="feedInFee" id ='feedInFee' placeholder="eg: 500" size="25" value="0.05" readonly="True">
+     <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
+     
   <center>  
 <input type="submit" value="Submit"> <input type="reset">
 </center>
@@ -54,6 +73,6 @@
 <div id="footerPan">
 
     <p><a href="#">HOME</a> | <a href="#">ABOUT US</a> | <a href="#">SOLUTIONS</a> | <a href="#">PRODUCTS</a> | <a href="#">NEWS</a> | <a href="#">CONTACT US</a><br/>
-  <span>Copyright &copy; Your Company Name. Designed by <a href="http://www.templateyes.com" target="_blank">TemplateYes</a></span></p>
+  <span>Copyright &copy; Agile Team One.</span></p>
 
 </div>

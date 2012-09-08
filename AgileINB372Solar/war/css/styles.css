@@ -76,7 +76,7 @@ p a:hover{ color:#000; text-decoration:none;}
 
 /* FOOTER */
 
-#footerPan {width:725px; height:58px; background: #edf4f5}
+#footerPan {width:100%; height:58px; background: #edf4f5}
 #footerPan p{padding: 10px 0 0 0; font:11px/16px Arial, Helvetica, sans-serif; font-weight:normal; text-align:center; color:#848484;}
 #footerPan p span{ font:11px/16px Arial, Helvetica, sans-serif; color:#848484;}
 #footerPan p a{ font:11px/16px Arial, Helvetica, sans-serif; color:#848484; text-decoration:none; padding: 0 3px }
