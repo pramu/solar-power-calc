@@ -37,24 +37,24 @@
 <form name = "calculator" method="post" action = "/calculatorAct" id = "calculator" onsubmit = "return Validate()" onreset = "resetBtn()"> 
 <div  class = "calculatorForm">
 <pre>
-     Savings: 
+     Savings (per Year): 
      <input type="text" name="savings" id ='savings' placeholder="eg: 500" size="25" >
      <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
           
-     AvgDailyHoursSun: 
+     AvgDailyHoursSun: (readonly) 
      <input type="text" name="avgDailyHoursSun" id ='avgDailyHoursSun' placeholder="eg: 500" size="25" value="4.5" readonly="True">
      <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
      
-     DayTimeHourlyUsage: 
+     DayTimeHourlyUsage: (readonly)
      <input type="text" name="dayTimeHourlyUsage" id ='dayTimeHourlyUsage' placeholder="eg: 500" size="25" value="1" readonly="True">
      <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
      
      
-     Tariff: 
+     Tariff: (readonly)
      <input type="text" name="tariff" id ='tariff' placeholder="eg: 500" size="25" value="0.1941" readonly="True">
      <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
      
-     FeedInFee: 
+     FeedInFee: (readonly)
      <input type="text" name="feedInFee" id ='feedInFee' placeholder="eg: 500" size="25" value="0.05" readonly="True">
      <span id='systemCostErrorMessage' style = 'visibility:hidden;'> </span>
      

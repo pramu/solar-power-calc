@@ -39,16 +39,16 @@
  
 <div  class = "calculatorForm">
 <h1>Calculation Result</h1>
-<pre>
-You require a system of a minimum size <%
+<p>
+You require a system of a minimum size <b> <%
  double systemSizeKw = (Double)request.getSession().getAttribute("systemSizeKw");	
  out.print(systemSizeKw);
-	request.getSession().removeAttribute("systemSizeKw");%> kw.
+	request.getSession().removeAttribute("systemSizeKw");%> </b> kw.
  
  <center>  
 <input type="submit" value="Back"> 
 </center>
-</pre>
+</p>
 </div>
 </form>
 
