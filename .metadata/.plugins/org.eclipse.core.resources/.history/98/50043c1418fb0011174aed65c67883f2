@@ -40,7 +40,7 @@ public class cmsHTTP {
 	public int REGISTRATION_TIMEOUT = 10 * 1000;
 	public String TAG = "cmsHTTP";
 	public Activity act;
-	public String noData = "no data";
+	public String noData = "죄송합니다.\n네트웍 장애가 있습니다.\n다시 시도해주세요.";
 	public String result = null;
 	public static HashMap<String, String> GETHM;
 	//public static String newResult;
