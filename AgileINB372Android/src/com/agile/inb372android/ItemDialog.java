@@ -33,11 +33,15 @@ public class ItemDialog{
 	public Dialog GetDetailDialog(){
 		 	dialog = new Dialog(con);
 			dialog.setContentView(R.layout.detailview);
-			TextView first = (TextView) dialog.findViewById(R.id.detailTitle);
-			TextView sec = (TextView) dialog.findViewById(R.id.detailDetail);
+			TextView panelPrice = (TextView) dialog.findViewById(R.id.panelPrice);
+			TextView panelEfficency = (TextView) dialog.findViewById(R.id.panelEfficency);
+			TextView panelSize = (TextView) dialog.findViewById(R.id.panelSize);
+			TextView panelQuentity = (TextView) dialog.findViewById(R.id.panelQuentity);
 			
-			first.setText("["+item.get("panelPrice["+itemNum+"]") + "]");
-			sec.setText("["+item.get("panelEfficency["+itemNum+"]") + "]");
+			panelPrice.setText("$"+item.get("panelPrice["+itemNum+"]"));
+			panelEfficency.setText(item.get("panelEfficency["+itemNum+"]")+"%");
+			panelSize.setText(item.get("panelSize["+itemNum+"]"));
+			panelQuentity.setText(item.get("panelQuentity["+itemNum+"]"));
 			
 			Button closeBtn = (Button) dialog.findViewById(R.id.detailCloseBtn);
 			closeBtn.setOnClickListener(new OnClickListener() {	

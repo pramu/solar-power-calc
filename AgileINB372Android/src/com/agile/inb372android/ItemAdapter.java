@@ -58,9 +58,9 @@ public class ItemAdapter extends BaseAdapter{
 			convertView = inflater.inflate(listLayout, parent, false);
 		}
 		((TextView) convertView.findViewById(R.id.itemNumber))
-		.setText("["+hm.get("systemTotal["+position+"]") + "]");
+		.setText("Cost: "+"$"+hm.get("systemTotal["+position+"]")+"  ");
 		((TextView) convertView.findViewById(R.id.itemTitle))
-		.setText("["+hm.get("systemSize["+position+"]") + "]");
+		.setText("Size: "+hm.get("systemSize["+position+"]")+"KW");
 		
 		
 		final int positionInt = position;

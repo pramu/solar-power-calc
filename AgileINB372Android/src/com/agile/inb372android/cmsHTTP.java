@@ -35,12 +35,13 @@ public class cmsHTTP {
 	public cmsHTTP(Activity act) {
 		this.act = act;
 	}
+	
 	public String mimeType = "text/html";
 	public String encoding = "UTF-8";
 	public int REGISTRATION_TIMEOUT = 10 * 1000;
 	public String TAG = "cmsHTTP";
 	public Activity act;
-	public String noData = "no data";
+	public String noData = "no Data!";
 	public String result = null;
 	public static HashMap<String, String> GETHM;
 	//public static String newResult;

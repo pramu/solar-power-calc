@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
 	private  Activity act = this;
 	private Context _context = this;
 	private cmsHTTP cmshttp;
-	String theUrl = "http://1.newagileteamone.appspot.com/xml.jsp";
+	String theUrl = "http://1.newagileteamone.appspot.com/systemdataxml.jsp";
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {

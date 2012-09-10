@@ -27,20 +27,31 @@ public final class R {
         public static final int ypg=0x7f02000d;
     }
     public static final class id {
-        public static final int allListView=0x7f070009;
-        public static final int detailCloseBtn=0x7f070004;
-        public static final int detailDetail=0x7f070003;
-        public static final int detailTitle=0x7f070001;
-        public static final int imageView1=0x7f07000b;
-        public static final int itemNumber=0x7f070006;
-        public static final int itemTitle=0x7f070007;
-        public static final int linearLayout1=0x7f070000;
-        public static final int listfactorLinearLayout=0x7f070005;
-        public static final int menu_settings=0x7f07000d;
-        public static final int relativeLayout1=0x7f070008;
-        public static final int scrollView1=0x7f070002;
-        public static final int startImageView=0x7f07000a;
-        public static final int systemBtn=0x7f07000c;
+        public static final int allListView=0x7f070013;
+        public static final int detailCloseBtn=0x7f07000e;
+        public static final int homePageBtn=0x7f070016;
+        public static final int imageView1=0x7f070015;
+        public static final int itemNumber=0x7f070010;
+        public static final int itemTitle=0x7f070011;
+        public static final int listfactorLinearLayout=0x7f07000f;
+        public static final int menu_settings=0x7f070018;
+        public static final int panelEfficency=0x7f070007;
+        public static final int panelPrice=0x7f070004;
+        public static final int panelQuentity=0x7f07000d;
+        public static final int panelSize=0x7f07000a;
+        public static final int relativeLayout1=0x7f070012;
+        public static final int scrollView1=0x7f070000;
+        public static final int startImageView=0x7f070014;
+        public static final int systemBtn=0x7f070017;
+        public static final int tableRow1=0x7f070002;
+        public static final int tableRow2=0x7f070005;
+        public static final int tableRow3=0x7f070008;
+        public static final int tableRow4=0x7f07000b;
+        public static final int textView1=0x7f070001;
+        public static final int textView2=0x7f070003;
+        public static final int textView3=0x7f070006;
+        public static final int textView4=0x7f070009;
+        public static final int textView5=0x7f07000c;
     }
     public static final class layout {
         public static final int detailview=0x7f030000;
