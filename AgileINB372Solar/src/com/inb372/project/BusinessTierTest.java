@@ -14,6 +14,7 @@ public class BusinessTierTest {
 		bt = new BusinessTier();
 		
 	}
+	//im a change
 	
 	//Testing for US #2
 	//@Test
