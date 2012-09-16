@@ -4,8 +4,9 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Insert title here</title>
+	<title>Calculator Results</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="validation.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -37,7 +38,7 @@
 
 <div id="buttons">
 	<% %> <!-- code for response.redirect here, return to calculator page -->
-	<input type="button" value="Back" onclick="redirect()"> 
+	<input type="button" value="Back" onclick="redirect()"/> 
 </div><!-- End buttons -->
 
 <div id="footer">

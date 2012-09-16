@@ -2,113 +2,55 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Solar Power</title>
-
-
-<link href="css/styles.css" rel="stylesheet" type="text/css" />
-
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Solar Power</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+<div id="wrapper">
 
-<div id="container">
+<div id="header">
+	<img src="/images/SolarCalculator.jpg" />
+</div><!-- End header -->
 
-<div id="headerPan">
+<div id="navigation">
+	<ul id="menu">
+	    <li><a href="/homeAct" title="home page">Home Page</a></li>
+	    <li><a href="/calculatorAct" title="calculator">Calculator</a></li>
+	    <li><a href="#" title="solutions">Solutions</a></li>
+	    <li><a href="/systemAct" title="products">Products</a></li>
+	    <li><a href="#" title="news">News</a></li>
+	    <li><a href="#" title="contacts">Contact Us</a></li>
+	</ul>
+</div><!-- End navigation -->
 
-<img src="images/logo.jpg" alt="" name="logo" width="245" height="62" id="logo" />
+<div id="content">
+	<h1>Welcome!</h1>
+	<p>Solar power is the conversion of sunlight into electricity, either directly using photovoltaics (PV), 
+	or indirectly using concentrated solar power (CSP). Concentrated solar power systems use lenses or mirrors 
+	and tracking systems to focus a large area of sunlight into a small beam. Photovoltaics convert light into 
+	electric current using the photoelectric effect.</p>
+	<p>Commercial concentrated solar power plants were first developed in the 1980s. The 354 MW SEGS CSP 
+	installation is the largest solar power plant in the world, located in the Mojave Desert of California. 
+	Other large CSP plants include the Solnova Solar Power Station (150 MW) and the Andasol solar power station 
+	(150 MW), both in Spain. The over 200 MW Agua Caliente Solar Project in the United States, and the 214 MW 
+	Charanka Solar Park in India, are the world’s largest photovoltaic plants.</p>
+	<p><a href="http://en.wikipedia.org/wiki/Solar_power">Source</a></p>
+	
+	<div id="picture">
+		<img src="/images/SolarPanelsPhoto.jpg" alt="Solar Panels"/>
+		<img src="/images/SolarPanelsRoof.jpg" alt="Solar Panels" />
+		<img src="/images/SolarPanelsSingle.jpg" alt="Solar Panels" />
+	</div><!-- End picture -->
+	
+</div><!-- End content -->
 
-<img src="images/slogan.jpg" alt="" name="slogan" width="200" height="154" id="slogan" />
+<div id="footer">
+	<p><a href="#">HOME PAGE</a> | <a href="#">CALCULATOR</a> | <a href="#">SOLUTIONS</a> | <a href="#">PRODUCTS</a> | <a href="#">NEWS</a> | <a href="#">CONTACT US</a><br/>
+	<span>Copyright © Agile Team One.</span></p>
+</div><!-- End footer -->
 
-<div id="follow">
-  <img src="images/h_follow.gif" width="60" height="18" alt="" />
-  <a href="#"><img src="images/follow_fb.gif" alt="" width="18" height="18" border="0" /></a>
-  <a href="#"><img src="images/follow_rss.gif" alt="" width="18" height="18" border="0" /></a>
-  </div>
-
-
-<ul class="menu">
-    <li class="b01"><a href="/homeAct" title="home page">home page</a></li>
-    <li class="linem"></li>
-    <li class="b02"><a href="/calculatorAct" title="calculator">calculator</a></li>
-    <li class="linem"></li>
-    <li class="b03"><a href="#" title="solutions">solutions</a></li>
-    <li class="linem"></li>
-    <li class="b04"><a href="/systemAct" title="products">products</a></li>
-    <li class="linem"></li>
-    <li class="b05"><a href="#" title="news">news</a></li>
-    <li class="linem"></li>
-    <li class="b06"><a href="#" title="contacts">contacts</a></li>
-</ul>
-
-
-</div>
-
-<div id="contentPan">
-
-<div id="c1">
-
-<div id="latest_news">
-<h2></h2>
-
-<p><a href="#">Lorem ipsum dolor sit amet</a><br />
-Donec lobortis purus vel urna. Nunc laoreet lacinia nunc. In volutpat sodales ipsum. Sed vestibulum. </p>
-
-<p><a href="#">Lorem ipsum dolor sit amet</a><br />
-Donec lobortis purus vel urna. Nunc laoreet lacinia nunc. In volutpat sodales ipsum. Sed vestibulum. </p>
-
-<p id="last_news"><a href="#">Lorem ipsum dolor sit amet</a><br />
-Donec lobortis purus vel urna. Nunc laoreet lacinia nunc. In volutpat sodales ipsum. Sed vestibulum. </p>
-
-</div>
-
-</div>
-
-<div id="c2">
-
-<div id="welcome">
-<h2></h2>
-
-<img src="images/img_welcome.jpg" width="128" height="74" alt="" />
-
-<p><span class="headline">Aenean pede. Phasellus porta. Ut dictum nonummy</span><br />
-  <a href="#">ultricies in, leo. Nullam eleifend. Duis tempor ipsum vitae diam.</a><br />
-Curabitur felis dui, bibendum vitae, Duis tempor ipsum vitae diam. felis dui, bibendum vitae, luctus quis, luctus quis, volutpat sed, orci. Cras vulputate ullamcorper ante. ultricies in, leo.</p>
-
-<div class="clear"></div>
-
-</div>
-
-<div id="solutions">
-<h2></h2>
-
-<p class="headline">Sed posuere ligula rhoncus erat pulvinar quis, tincidunt et, risus. </p>
-
-<ul>
-<li><a href="#">Nam eu nulla. Donec lobortis purus vel  </a></li>
-<li><a href="#">urna. Nunc laoreet lacinia nunc. In volutpat  </a></li>
-<li><a href="#">sodales ipsum. Sed vestibulum. Integer in </a></li>
-</ul>
-
-</div>
-
-
-</div>
-
-<div class="clear"></div>
-
-</div>
-
-<div id="footerPan">
-
-    <p><a href="#">HOME</a> | <a href="#">ABOUT US</a> | <a href="#">SOLUTIONS</a> | <a href="#">PRODUCTS</a> | <a href="#">NEWS</a> | <a href="#">CONTACT US</a><br/>
-  <span>Copyright &copy; Your Company Name. Designed by <a href="http://www.templateyes.com" target="_blank">TemplateYes</a></span></p>
-
-</div>
-
-
-</div>
-
-
+</div><!-- End wrapper -->
 </body>
 </html>
