@@ -7,24 +7,14 @@
 	<title>Calculator Results</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="validation.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </head>
-<body>
+<body onload="load();">
 <div id="wrapper">
 
-<div id="header">
-	<img src="/images/SolarCalculator.jpg" />
-</div><!-- End header -->
+<div id="header"></div><!-- End header -->
 
-<div id="navigation">
-	<ul id="menu">
-	    <li><a href="/homeAct" title="home page">Home Page</a></li>
-	    <li><a href="/calculatorAct" title="calculator">Calculator</a></li>
-	    <li><a href="#" title="solutions">Solutions</a></li>
-	    <li><a href="/systemAct" title="products">Products</a></li>
-	    <li><a href="#" title="news">News</a></li>
-	    <li><a href="#" title="contacts">Contact Us</a></li>
-	</ul>
-</div><!-- End navigation -->
+<div id="navigation"></div><!-- End navigation -->
 
 <div id="content">
 	<h1>Calculation Result</h1>
@@ -41,10 +31,7 @@
 	<input type="button" value="Back" onclick="redirect()"/> 
 </div><!-- End buttons -->
 
-<div id="footer">
-	<p><a href="#">HOME PAGE</a> | <a href="#">CALCULATOR</a> | <a href="#">SOLUTIONS</a> | <a href="#">PRODUCTS</a> | <a href="#">NEWS</a> | <a href="#">CONTACT US</a><br/>
-	<span>Copyright © Agile Team One.</span></p>
-</div><!-- End footer -->
+<div id="footer"></div><!-- End footer -->
 
 </div><!-- End wrapper -->
 </body>
