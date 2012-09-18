@@ -93,9 +93,9 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_x6djc_sQEeGlzp8kOWShRw" elementId="org.eclipse.wb.core.StructureView" toBeRendered="false" ref="_x6buQPsQEeGlzp8kOWShRw"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_x6djdPsQEeGlzp8kOWShRw" elementId="org.eclipse.wb.core.PaletteView" toBeRendered="false" ref="_x6cVUPsQEeGlzp8kOWShRw"/>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_x6djdfsQEeGlzp8kOWShRw" elementId="org.eclipse.egit.ui.RepositoriesViewMStack" toBeRendered="false" containerData="4000">
+              <children xsi:type="basic:PartStack" xmi:id="_x6djdfsQEeGlzp8kOWShRw" elementId="org.eclipse.egit.ui.RepositoriesViewMStack" containerData="4000" selectedElement="_x6djdvsQEeGlzp8kOWShRw">
                 <tags>newtablook</tags>
-                <children xsi:type="advanced:Placeholder" xmi:id="_x6djdvsQEeGlzp8kOWShRw" elementId="org.eclipse.egit.ui.RepositoriesView" toBeRendered="false" ref="_x6Z5EPsQEeGlzp8kOWShRw"/>
+                <children xsi:type="advanced:Placeholder" xmi:id="_x6djdvsQEeGlzp8kOWShRw" elementId="org.eclipse.egit.ui.RepositoriesView" ref="_x6Z5EPsQEeGlzp8kOWShRw"/>
               </children>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_x6eKgPsQEeGlzp8kOWShRw" containerData="7196" selectedElement="_x6eKgfsQEeGlzp8kOWShRw">
@@ -170,7 +170,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_4rFFMPscEeGDyJ-KO7guow" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="cmsHTTP.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="com.agile.inb372android.MainActivity/src/com/agile/inb372android/cmsHTTP.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/com.agile.inb372android.MainActivity/src/com/agile/inb372android/cmsHTTP.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1083&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/com.agile.inb372android.MainActivity/src/com/agile/inb372android/cmsHTTP.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1103&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>
@@ -271,9 +271,15 @@
       <tags>View</tags>
       <tags>categoryTag:Ant</tags>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_x6Z5EPsQEeGlzp8kOWShRw" elementId="org.eclipse.egit.ui.RepositoriesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Git Repositories" iconURI="platform:/plugin/org.eclipse.egit.ui/icons/eview16/repo_rep.gif" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_x6Z5EPsQEeGlzp8kOWShRw" elementId="org.eclipse.egit.ui.RepositoriesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Git Repositories" iconURI="platform:/plugin/org.eclipse.egit.ui/icons/eview16/repo_rep.gif" tooltip="" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Git</tags>
+      <menus xmi:id="_jAKWQPsvEeGGErvHuxX8uA" elementId="org.eclipse.egit.ui.RepositoriesView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_jAK9UPsvEeGGErvHuxX8uA" elementId="org.eclipse.egit.ui.RepositoriesView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_x6Z5EfsQEeGlzp8kOWShRw" elementId="org.eclipse.jdt.junit.ResultView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="JUnit" iconURI="platform:/plugin/org.eclipse.jdt.junit//icons/full/eview16/junit.gif" closeable="true">
       <tags>View</tags>
