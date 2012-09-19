@@ -42,10 +42,8 @@
 							out.print(BusinessTier.GetSystemSize(i) + "KW");
 						%>
 					</td>
-					<%
-						long name = BusinessTier.GetSystemID(i);
-					%>
-					<td><a href=panelview.jsp?Detail= <%=name%>>Detail</a></td>
+					<%long name=BusinessTier.GetSystemID(i);%>
+					<td><a href=panelview.jsp?Detail=<%=name%>>Detail</a></td>
 				</tr>
 				<%
 					}
