@@ -43,11 +43,10 @@ public class cmsHTTP {
 	public String noData = "no Data.";
 	public String result = null;
 	public static HashMap<String, String> GETHM;
-	//public static String newResult;
-	
 
-	public void sendGet(String url) {
+	public String sendGet(String url) {
 
+		String result = null;
 		HttpResponse resp;
 
 		HttpGet httpGet = new HttpGet(url);
@@ -88,6 +87,7 @@ public class cmsHTTP {
 
 		
 		xml2HashMap(result, "UTF-8");
+		return result;
 	
 	}
 

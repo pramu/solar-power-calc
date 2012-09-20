@@ -22,6 +22,8 @@ public class MenuActivity extends Activity {
         systemBtn.setOnClickListener(MenuListener);
         Button calculatorBtn = (Button) findViewById(R.id.calculatorBtn);
         calculatorBtn.setOnClickListener(MenuListener);
+        Button mapBtn = (Button) findViewById(R.id.mapBtn);
+        mapBtn.setOnClickListener(MenuListener);
  
     }
     
@@ -49,6 +51,12 @@ public class MenuActivity extends Activity {
  				act.finish();
  				act.startActivity(myIntent);
  				break;
+ 			case R.id.mapBtn:
+ 				myIntent = new Intent(MenuActivity.this,MapSearchActivity.class);
+ 				act.finish();
+ 				act.startActivity(myIntent);
+ 				break;
+
 
  			}
  		}
