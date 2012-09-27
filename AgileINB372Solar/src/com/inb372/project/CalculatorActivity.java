@@ -41,10 +41,11 @@ public class CalculatorActivity extends HttpServlet {
     	double dayTimeHourlyUsage = Double.parseDouble(request.getParameter("dayTimeHourlyUsage"));
     	double tariff = Double.parseDouble(request.getParameter("tariff"));
     	double feedInFee = Double.parseDouble(request.getParameter("feedInFee"));
+    	String savingsInterval = request.getParameter("savingsInterval");
     	double systemSizeKw;
     
-    		systemSizeKw = BusinessTier.calculateMinKw(savings, avgDailyHoursSun, dayTimeHourlyUsage, tariff, feedInFee);
-    	
+    		//systemSizeKw = BusinessTier.calculateMinKw(savings, avgDailyHoursSun, dayTimeHourlyUsage, tariff, feedInFee);
+    		systemSizeKw = BusinessTier.calculateMinKwForSavingInterval(savings, savingsInterval, avgDailyHoursSun, dayTimeHourlyUsage, tariff, feedInFee);
     		request.getSession().setAttribute("systemSizeKw",systemSizeKw);
     		resp.sendRedirect("/calculatorresult.jsp");
    

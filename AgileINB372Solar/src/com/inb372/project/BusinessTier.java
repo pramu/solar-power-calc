@@ -1,9 +1,11 @@
 package com.inb372.project;
 
-//import java.util.List;
+import java.util.List;
 //
 //import com.google.appengine.api.datastore.Entity;
+//import java.awt.List;
 import java.util.ArrayList;
+
 
 import com.google.appengine.api.datastore.EntityNotFoundException;
 //import com.google.appengine.api.datastore.FetchOptions;
@@ -44,9 +46,28 @@ public class BusinessTier {
 //	}
 //	
 	
+	public static double[] savingPerYearToBreakEven(double investment, double systemKW, double avgDailyHoursSun, double dayTimeHourlyUsage, double tariff, double feedInFee){
+		double [] savings = new double[1];
+		
+		return savings;
+	}
 	
+	public static int numberOfMonthsToBreakEven(double investment, double systemKW, double avgDailyHoursSun, double dayTimeHourlyUsage, double tariff, double feedInFee){
+		
+		double replacementGeneration = avgDailyHoursSun * dayTimeHourlyUsage;
+		
+		double exportedGenKw = systemKW * replacementGeneration - replacementGeneration;
+		
+		
+		double savings = ((exportedGenKw * feedInFee) + (replacementGeneration * tariff)) * 365;
+		
+		savings = savings /12;
+		
+		int numMonths = (int)(Math.ceil(investment/savings)); 
+		return numMonths;
+	}
 	
-	public static double calculateMinKw(double savings, double avgDailyHoursSun, double dayTimeHourlyUsage, double tariff, double feedInFee){
+	public static double calculateMinKw(double savings,  double avgDailyHoursSun, double dayTimeHourlyUsage, double tariff, double feedInFee){
 		double systemSizeKw;
 		//double tariff = 0.1941;
 		//double avgDailyHoursSun = 4.5;
@@ -54,6 +75,33 @@ public class BusinessTier {
 		double replacementGeneration = avgDailyHoursSun * dayTimeHourlyUsage;
 		double exportedGenKw;
 		
+		
+		exportedGenKw = (((savings / 365) - (replacementGeneration * tariff)) / feedInFee);
+		
+		systemSizeKw = ((replacementGeneration + exportedGenKw) / replacementGeneration);
+		if (systemSizeKw < 0){
+			systemSizeKw = 0.01;
+		}
+		return systemSizeKw;
+	}
+	
+	public static double calculateMinKwForSavingInterval(double savings, String interval, double avgDailyHoursSun, double dayTimeHourlyUsage, double tariff, double feedInFee){
+		double systemSizeKw;
+
+		double replacementGeneration = avgDailyHoursSun * dayTimeHourlyUsage;
+		double exportedGenKw;
+
+
+		if (interval.toUpperCase() == "WEEK") {
+			savings = savings * 52;
+        } else if (interval.toUpperCase() == "FORTNIGHT") {
+        	savings = savings * 26;
+        } else if (interval.toUpperCase() == "MONTH") {
+        	savings = savings * 12;
+        } else if (interval.toUpperCase() == "SIXMONTHS") {
+        	savings = savings * 2;
+        }
+
 		
 		exportedGenKw = (((savings / 365) - (replacementGeneration * tariff)) / feedInFee);
 		
