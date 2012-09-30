@@ -2,6 +2,7 @@ package com.agile.inb372android;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.json.JSONException;
@@ -46,19 +47,33 @@ public class MapSearchActivity extends MapActivity {
 	
 	private double currentLonditude;
 	private double currentLatitude; 
+	
+	private final int ADDCURRENTLOCATIONNUM = 1;
+	private ArrayList<mapOverlay> mapOverlayList = new ArrayList<mapOverlay>();
+	private ArrayList<OverlayItem> markerList = new ArrayList<OverlayItem>();
+	private ArrayList<String> testLocationList = new ArrayList<String>();
+	private ArrayList<String> testInfoList = new ArrayList<String>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.googlemapview);
+        //for test multiple locations
+        testLocationList.add("nundah");
+        testInfoList.add("save: 100KW p/w");
+        testLocationList.add("qut");
+        testInfoList.add("save: 200KW p/w");
+        testLocationList.add("kelvin grove");
+        testInfoList.add("save: 232KW p/w");
+        testLocationList.add("woolloogabba");
+        testInfoList.add("save: 420KW p/w");
         
         locManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         GetCurrentLocation();
-        final EditText mapAddress = (EditText) findViewById(R.id.mapAddress);
+        
 		Button mapSearchBtn = (Button) findViewById(R.id.mapSearchBtn);
 		mapSearchBtn.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
-				tmpKeyWord = mapAddress.getText().toString();
 				new MapLoadtask().execute();
 			}
 		});
@@ -98,7 +113,7 @@ public class MapSearchActivity extends MapActivity {
     		locManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locListener);
     	}
     }
-    public void doSearchMap(String query) {
+    public void doSearchMap(String query, int markerNum) {
     	
 		int latitude = 0;
 		int longitude = 0;
@@ -150,11 +165,14 @@ public class MapSearchActivity extends MapActivity {
 		} catch (JSONException e) {
 			Log.e(TAG, e.getMessage());
 		}
-		viewMap(latitude, longitude, query);
+		viewMap(latitude, longitude, query, markerNum);
+
+		
 	}
 	
 	
-	public void viewMap(int latitude, int longitude, String query) {
+	public void viewMap(int latitude, int longitude, String query, int markerNum) {
+		
 		owlMap = (MapView)findViewById(R.id.maps);
 	    owlMap.setSatellite(false);
 	    owlMap.setBuiltInZoomControls(true);
@@ -176,15 +194,15 @@ public class MapSearchActivity extends MapActivity {
         mapOverlay.mContext = this;
         mapOverlay.mPopulate();
         
-        OverlayItem overlayitem = new OverlayItem(p, "Destination", query);
-        mapOverlay.addOverlay(overlayitem);
+        String info = testInfoList.get(markerNum-1);
+        OverlayItem overlayitem = new OverlayItem(p, "Destination: " + query, info);
+        markerList.add(overlayitem);
         
-        owlMap.getOverlays().add(mapOverlay);
+        mapOverlay.addOverlay(markerList.get(markerNum));
+        //mapOverlay.addOverlay(markerList.get(1));
         
-        owlMap.getController().animateTo(p);
-        owlMap.getController().setZoom(19);
-        owlMap.postInvalidate();
-
+        mapOverlayList.add(mapOverlay);
+   
 	}
 
 	@Override
@@ -202,13 +220,19 @@ public class MapSearchActivity extends MapActivity {
 			}
 			@Override
 			protected Void doInBackground(Integer... params) {
-				doSearchMap(tmpKeyWord);
-				
+				for(int i = 0; i < testLocationList.size(); i ++){
+					doSearchMap(testLocationList.get(i), i+ADDCURRENTLOCATIONNUM);
+				}
 				return null;
 			}
 			@Override
 			protected void onPostExecute(Void abc) {
-				progressDialog.dismiss();			
+				progressDialog.dismiss();
+				int temp = mapOverlayList.size();
+				for(int i =0; i< temp; i++){
+					owlMap.getOverlays().add(mapOverlayList.get(i));
+					owlMap.postInvalidate();
+				}
 			}
 			
 		}
@@ -249,20 +273,20 @@ public class MapSearchActivity extends MapActivity {
 		    		Log.d(TAG, "empty overlays");
 		    	}
 		        
-		        Drawable marker = act.getResources().getDrawable(R.drawable.map_mark);
+		        Drawable marker = act.getResources().getDrawable(R.drawable.currentpushpin);
 		        
 		    	marker.setBounds(0, 0, marker.getIntrinsicWidth(), marker.getIntrinsicHeight());       
 		        mapOverlay mapOverlay = new mapOverlay(marker);
 		        mapOverlay.mContext = _context;
 		        mapOverlay.mPopulate();
 		        
-		        OverlayItem overlayitem = new OverlayItem(p, "Location", "you r here");
-		        mapOverlay.addOverlay(overlayitem);
-		        
+		        OverlayItem overlayitem = new OverlayItem(p, "Location", "your location!");
+		        markerList.add(overlayitem);
+		        mapOverlay.addOverlay(markerList.get(0));
+		        mapOverlayList.add(mapOverlay);
 		        owlMap.getOverlays().add(mapOverlay);
-		        
 		        owlMap.getController().animateTo(p);
-		        owlMap.getController().setZoom(19);
+		        owlMap.getController().setZoom(12);
 		        owlMap.postInvalidate();
 		        
 			}

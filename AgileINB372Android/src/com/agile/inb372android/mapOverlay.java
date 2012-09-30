@@ -20,6 +20,7 @@ public class mapOverlay extends ItemizedOverlay<OverlayItem> {
 
 	}
 
+
 	public mapOverlay(Drawable defaultMarker, Context context) {
 		super(defaultMarker);
 		mContext = context;
