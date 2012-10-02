@@ -1,136 +1,200 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="23dp"
-        android:orientation="vertical" >
+    <TabHost
+        android1:id="@android:id/tabhost"
+        android1:layout_width="match_parent"
+        android1:layout_height="match_parent" >
 
-        <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+        <LinearLayout
+            android1:layout_width="match_parent"
+            android1:layout_height="match_parent"
+            android1:orientation="vertical" >
 
-            <TableRow
-                android:id="@+id/tableRow1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+            <TabWidget
+                android1:id="@android:id/tabs"
+                android1:layout_width="match_parent"
+                android1:layout_height="wrap_content" >
+            </TabWidget>
 
-                <TextView
-                    android:id="@+id/savingsTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Savings (per Year)" />
+            <FrameLayout
+                android1:id="@android:id/tabcontent"
+                android1:layout_width="match_parent"
+                android1:layout_height="match_parent" >
 
-                <EditText
-                    android:id="@+id/savingsEditText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10" />
-            </TableRow>
+                <LinearLayout
+                    android1:id="@+id/tab1"
+                    android1:layout_width="match_parent"
+                    android1:layout_height="match_parent" >
 
-            <TableRow
-                android:id="@+id/tableRow2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                    <LinearLayout
+                        android1:id="@+id/linearLayout1"
+                        android1:layout_width="wrap_content"
+                        android1:layout_height="wrap_content"
+                        android1:layout_marginTop="23dp"
+                        android1:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/avgDailyHoursSunTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AvgDailyHoursSun" />
+                        <TextView
+                            android1:id="@+id/instructionTextView"
+                            android1:layout_width="match_parent"
+                            android1:layout_height="wrap_content"
+                            android1:text="Instruction" />
 
-                <EditText
-                    android:id="@+id/avgDailyHoursSunEditText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:editable="false"
-                    android:ems="10"
-                    android:text="4.5" />
-            </TableRow>
+                        <TableLayout
+                            android1:layout_width="wrap_content"
+                            android1:layout_height="wrap_content" >
 
-            <TableRow
-                android:id="@+id/tableRow3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                            <TableRow
+                                android1:id="@+id/tableRow1"
+                                android1:layout_width="wrap_content"
+                                android1:layout_height="wrap_content" >
 
-                <TextView
-                    android:id="@+id/dayTimeHourlyUsageTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dayTimeHourlyUsage" />
+                                <TextView
+                                    android1:id="@+id/savingsTextView"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:text="Savings (per Year)" />
 
-                <EditText
-                    android:id="@+id/dayTimeHourlyUsageEditText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:editable="false"
-                    android:ems="10"
-                    android:text="1" />
-            </TableRow>
+                                <EditText
+                                    android1:id="@+id/savingsEditText"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:ems="10" >
 
-            <TableRow
-                android:id="@+id/tableRow4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                                    <requestFocus />
+                                </EditText>
+                            </TableRow>
 
-                <TextView
-                    android:id="@+id/tariffTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tariff" />
+                            <TableRow
+                                android1:id="@+id/tableRow4"
+                                android1:layout_width="wrap_content"
+                                android1:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/tariffEditText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:editable="false"
-                    android:ems="10"
-                    android:text="0.1941" />
-            </TableRow>
+                                <TextView
+                                    android1:id="@+id/intervalTextView"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:text="Interval" />
 
-            <TableRow
-                android:id="@+id/TableRow01"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                                <Spinner
+                                    android1:id="@+id/intervalSpin"
+                                    android1:layout_width="match_parent"
+                                    android1:layout_height="wrap_content" />
+                            </TableRow>
 
-                <TextView
-                    android:id="@+id/feedInFeeTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="FeedInFee" />
+                            <TableRow
+                                android1:id="@+id/tableRow2"
+                                android1:layout_width="wrap_content"
+                                android1:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/feedInFeeEditText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:editable="false"
-                    android:ems="10"
-                    android:text="0.05" />
-            </TableRow>
-        </TableLayout>
+                                <TextView
+                                    android1:id="@+id/avgDailyHoursSunTextView"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:text="AvgDailyHoursSun" />
 
-        <Button
-            android:id="@+id/calculatorCheckBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Check" />
+                                <EditText
+                                    android1:id="@+id/avgDailyHoursSunEditText"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:editable="false"
+                                    android1:ems="10"
+                                    android1:text="4.5" />
+                            </TableRow>
 
-    </LinearLayout>
+                            <TableRow
+                                android1:id="@+id/tableRow3"
+                                android1:layout_width="wrap_content"
+                                android1:layout_height="wrap_content" >
 
-    <TextView
-        android:id="@+id/calculatorReulstTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/linearLayout1"
-        />
+                                <TextView
+                                    android1:id="@+id/dayTimeHourlyUsageTextView"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:text="dayTimeHourlyUsage" />
+
+                                <EditText
+                                    android1:id="@+id/dayTimeHourlyUsageEditText"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:editable="false"
+                                    android1:ems="10"
+                                    android1:text="1" />
+                            </TableRow>
+
+                            <TableRow
+                                android1:id="@+id/tableRow4"
+                                android1:layout_width="wrap_content"
+                                android1:layout_height="wrap_content" >
+
+                                <TextView
+                                    android1:id="@+id/tariffTextView"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:text="Tariff" />
+
+                                <EditText
+                                    android1:id="@+id/tariffEditText"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:editable="false"
+                                    android1:ems="10"
+                                    android1:text="0.1941" />
+                            </TableRow>
+
+                            <TableRow
+                                android1:id="@+id/TableRow01"
+                                android1:layout_width="wrap_content"
+                                android1:layout_height="wrap_content" >
+
+                                <TextView
+                                    android1:id="@+id/feedInFeeTextView"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:text="FeedInFee" />
+
+                                <EditText
+                                    android1:id="@+id/feedInFeeEditText"
+                                    android1:layout_width="wrap_content"
+                                    android1:layout_height="wrap_content"
+                                    android1:editable="false"
+                                    android1:ems="10"
+                                    android1:text="0.05" />
+                            </TableRow>
+                        </TableLayout>
+
+                        <Button
+                            android1:id="@+id/calculatorCheckBtn"
+                            android1:layout_width="match_parent"
+                            android1:layout_height="wrap_content"
+                            android1:text="Check" />
+
+                        <TextView
+                            android1:id="@+id/calculatorReulstTextView"
+                            android1:layout_width="match_parent"
+                            android1:layout_height="102dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android1:id="@+id/tab2"
+                    android1:layout_width="match_parent"
+                    android1:layout_height="match_parent" >
+
+                    <TextView
+                        android1:id="@+id/textView1"
+                        android1:layout_width="wrap_content"
+                        android1:layout_height="wrap_content"
+                        android1:text="TextView" />
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 
 </RelativeLayout>
