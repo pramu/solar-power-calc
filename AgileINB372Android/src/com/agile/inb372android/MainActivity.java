@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
     
     protected void onResume(){
   	  ImageView startImage = (ImageView) findViewById(R.id.startImageView) ;
-      //new DataLoadtask().execute(0);
+      new DataLoadtask().execute(0);
       startImage.setOnClickListener(new OnClickListener() {	
 			@Override
 			public void onClick(View v) {

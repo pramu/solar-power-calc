@@ -32,6 +32,7 @@
 			android:required="true"
 		></uses-library>
     <activity android:name="MapSearchActivity"></activity>
+    <activity android:name="CompareActivity"></activity>
     </application>
    
 

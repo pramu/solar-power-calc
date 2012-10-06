@@ -8,10 +8,19 @@
             android:id="@+id/allListView"
             android:layout_width="match_parent"
             android:layout_height="372dp"
-            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/compareBtn"
             android:layout_alignParentTop="true"
             android:background="@drawable/listviewbackground" >
 
         </ListView>
+
+        <Button
+            android:id="@+id/compareBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="compare system" />
 
     </RelativeLayout>

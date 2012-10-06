@@ -34,10 +34,12 @@ public class SystemActivity extends Activity {
 	    listView = (ListView) findViewById(R.id.allListView);
         //inflater = (LayoutInflater) getSystemService(this.LAYOUT_INFLATER_SERVICE);
         hashMap = cmsHTTP.GETHM;
-        itemAdapter = new ItemAdapter(this, hashMap,  R.layout.listfactor);
+        itemAdapter = new ItemAdapter(this, act, hashMap,  R.layout.listfactor);
 		listView.setDivider(new ColorDrawable(Color.DKGRAY));
 		listView.setDividerHeight(2);
 		listView.setAdapter(itemAdapter);
+		
+		
 
 	
 	}

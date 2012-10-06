@@ -31,6 +31,8 @@ public class MenuActivity extends Activity {
 		Uri uri = Uri.parse("http://"+ destinationAdd);
 		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 		act.startActivity(intent);
+		
+		
 	}       
  // Create an anonymous implementation of OnClickListener
  	private OnClickListener MenuListener = new OnClickListener() {
