@@ -41,21 +41,21 @@ public class MenuActivity extends Activity {
  		public void onClick(View v) {
  			switch (v.getId()) {
  			case R.id.homePageBtn:
- 				GotoWeb("1.newagileteamone.appspot.com/index.jsp");
+ 				GotoWeb("1.agileteamone.appspot.com/index.jsp");
  				break;
  			case R.id.systemBtn:
  				myIntent = new Intent(MenuActivity.this,SystemActivity.class);
- 				act.finish();
+ 				//act.finish();
  				act.startActivity(myIntent);
  				break;
  			case R.id.calculatorBtn:
  				myIntent = new Intent(MenuActivity.this,CalculatorActivity.class);
- 				act.finish();
+ 				//act.finish();
  				act.startActivity(myIntent);
  				break;
  			case R.id.mapBtn:
  				myIntent = new Intent(MenuActivity.this,MapSearchActivity.class);
- 				act.finish();
+ 				//act.finish();
  				act.startActivity(myIntent);
  				break;
 
