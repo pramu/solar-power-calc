@@ -23,3 +23,7 @@ function getXmlHttpRequest() {
 	}
 	return new ActiveXObject("Microsoft.XMLHTTP");
 }
+function loadCalculator(from){
+	var url = 'snippets/' + from + '.html';
+	injectElem(document.getElementById('content'), url)
+}

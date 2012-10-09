@@ -18,11 +18,16 @@
 
 		<div id="navigation"></div>
 		<!-- End navigation -->
+		
+		<div id="tabs">
+			<a onclick="loadCalculator('basic');"><h3>Basic Calculator</h3></a>
+			<a onclick="loadCalculator('duration');"><h3>numberOfMonthsToBreakEven</h3></a>
+		</div>
+		
+		<div id="content">
+			<form name="calculator" method="post" action="/calculatorAct"
+				id="calculator" onsubmit="return Validate()" onreset="resetBtn()">
 
-
-		<form name="calculator" method="post" action="/calculatorAct"
-			id="calculator" onsubmit="return Validate()" onreset="resetBtn()">
-			<div id="content">
 				<table id="calculatorTable">
 					<tr>
 						<td>Savings (per Year):</td>
@@ -61,16 +66,16 @@
 				</table>
 				<!-- End calculatorTable -->
 
-			</div>
-			<!-- End content -->
 
-			<div id="buttons">
-				<input type="submit" id="calculatorSubmit" value="Submit" /> <input
-					type="submit" id="calculatorReset" value="Reset" />
-			</div>
-			<!-- End buttons -->
-		</form>
-		<!-- End calculator -->
+				<div id="buttons">
+					<input type="submit" id="calculatorSubmit" value="Submit" /> <input
+						type="submit" id="calculatorReset" value="Reset" />
+				</div>
+				<!-- End buttons -->
+			</form>
+			<!-- End calculator -->
+		</div>
+		<!-- End content -->
 
 		<div id="footer"></div>
 		<!-- End footer -->
