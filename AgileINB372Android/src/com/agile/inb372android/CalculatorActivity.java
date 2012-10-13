@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TabHost;
+import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
 
@@ -23,9 +25,7 @@ public class CalculatorActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.calculatorview);
-	    
-	    //need to be typed more with detail
-	    String instructionString = "Instruction: ";
+	    TabHostEvent();
 	    
 	    final EditText savingsText = (EditText) findViewById(R.id.savingsEditText);
 	    final EditText avgDailyHoursSunText = (EditText) findViewById(R.id.avgDailyHoursSunEditText);
@@ -33,8 +33,6 @@ public class CalculatorActivity extends Activity {
 	    final EditText tariffText = (EditText) findViewById(R.id.tariffEditText);
 	    final EditText feedInFeeText = (EditText) findViewById(R.id.feedInFeeEditText);
 	    final TextView resultTextView = (TextView) findViewById(R.id.calculatorReulstTextView);
-	    TextView instructionTextView = (TextView) findViewById(R.id.instructionTextView);
-	    instructionTextView.setText(instructionString);
 	    
 	    String[] list = getResources().getStringArray(R.array.intervalArray);
 		final Spinner intervalSpinner = (Spinner) act.findViewById(R.id.intervalSpin);
@@ -64,7 +62,32 @@ public class CalculatorActivity extends Activity {
 			}
 		});
 	    
+	    //tab2
+	    String instructionString = "Instruction: ";
+	    TextView instructionTextView = (TextView) findViewById(R.id.instructionTextView);
+	    instructionTextView.setText(instructionString); 
+	     
 	 
+	}
+	public void TabHostEvent(){
+		//tab event
+	    TabHost tabHost = (TabHost) findViewById(android.R.id.tabhost);
+	    tabHost.setup();
+	    
+	    TabSpec spec1 = tabHost.newTabSpec("Tab1");
+		spec1.setContent(R.id.tab1);
+		spec1.setIndicator(getString(R.string.tab1));
+		// spec1.setIndicator(getString(R.string.tab1), getResources()
+		// .getDrawable(R.drawable.cont1));
+		tabHost.addTab(spec1);
+
+		TabSpec spec2 = tabHost.newTabSpec("Tab2");
+		spec2.setContent(R.id.tab2);
+		spec2.setIndicator(getString(R.string.tab2));
+		tabHost.addTab(spec2);
+		
+		tabHost.getTabWidget().getChildAt(0).getLayoutParams().height = 80;
+		tabHost.getTabWidget().getChildAt(1).getLayoutParams().height = 80;
 	}
 	
 	public String GetIntervalSpinner(Spinner intervalSpinner, ArrayAdapter<String> dataAdapter){

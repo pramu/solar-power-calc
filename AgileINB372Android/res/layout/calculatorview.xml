@@ -1,200 +1,190 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android1="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+>
+	<TabHost android:layout_width="match_parent"
+		android:layout_height="match_parent" 
+		android:id="@android:id/tabhost"
+	>
 
-    <TabHost
-        android1:id="@android:id/tabhost"
-        android1:layout_width="match_parent"
-        android1:layout_height="match_parent" >
+		<LinearLayout android:id="@+id/linearLayout1"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:orientation="vertical"
+		>
 
-        <LinearLayout
-            android1:layout_width="match_parent"
-            android1:layout_height="match_parent"
-            android1:orientation="vertical" >
+			<TabWidget
+			    android:id="@android:id/tabs"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:tabStripEnabled="true" >
+			</TabWidget>
 
-            <TabWidget
-                android1:id="@android:id/tabs"
-                android1:layout_width="match_parent"
-                android1:layout_height="wrap_content" >
-            </TabWidget>
+			<FrameLayout android:id="@android:id/tabcontent"
+				android:layout_width="match_parent" android:layout_height="match_parent"
+				android:layout_weight="1"
+			>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:gravity="center"
+					android:orientation="vertical" android:id="@+id/tab1"
+				>
 
-            <FrameLayout
-                android1:id="@android:id/tabcontent"
-                android1:layout_width="match_parent"
-                android1:layout_height="match_parent" >
-
-                <LinearLayout
-                    android1:id="@+id/tab1"
-                    android1:layout_width="match_parent"
-                    android1:layout_height="match_parent" >
-
-                    <LinearLayout
-                        android1:id="@+id/linearLayout1"
-                        android1:layout_width="wrap_content"
-                        android1:layout_height="wrap_content"
-                        android1:layout_marginTop="23dp"
-                        android1:orientation="vertical" >
-
-                        <TextView
-                            android1:id="@+id/instructionTextView"
-                            android1:layout_width="match_parent"
-                            android1:layout_height="wrap_content"
-                            android1:text="Instruction" />
+					<LinearLayout
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:orientation="vertical" 
+					    >
 
                         <TableLayout
-                            android1:layout_width="wrap_content"
-                            android1:layout_height="wrap_content" >
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
 
                             <TableRow
-                                android1:id="@+id/tableRow1"
-                                android1:layout_width="wrap_content"
-                                android1:layout_height="wrap_content" >
+                                android:id="@+id/tableRow1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
 
                                 <TextView
-                                    android1:id="@+id/savingsTextView"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:text="Savings (per Year)" />
+                                    android:id="@+id/savingsTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Savings (per Year)" />
 
                                 <EditText
-                                    android1:id="@+id/savingsEditText"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:ems="10" >
+                                    android:id="@+id/savingsEditText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10" >
 
                                     <requestFocus />
                                 </EditText>
                             </TableRow>
 
                             <TableRow
-                                android1:id="@+id/tableRow4"
-                                android1:layout_width="wrap_content"
-                                android1:layout_height="wrap_content" >
+                                android:id="@+id/tableRow4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
 
                                 <TextView
-                                    android1:id="@+id/intervalTextView"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:text="Interval" />
+                                    android:id="@+id/intervalTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Interval" />
 
                                 <Spinner
-                                    android1:id="@+id/intervalSpin"
-                                    android1:layout_width="match_parent"
-                                    android1:layout_height="wrap_content" />
+                                    android:id="@+id/intervalSpin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
                             </TableRow>
 
                             <TableRow
-                                android1:id="@+id/tableRow2"
-                                android1:layout_width="wrap_content"
-                                android1:layout_height="wrap_content" >
+                                android:id="@+id/tableRow2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
 
                                 <TextView
-                                    android1:id="@+id/avgDailyHoursSunTextView"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:text="AvgDailyHoursSun" />
+                                    android:id="@+id/avgDailyHoursSunTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="AvgDailyHoursSun" />
 
                                 <EditText
-                                    android1:id="@+id/avgDailyHoursSunEditText"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:editable="false"
-                                    android1:ems="10"
-                                    android1:text="4.5" />
+                                    android:id="@+id/avgDailyHoursSunEditText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:ems="10"
+                                    android:text="4.5" />
                             </TableRow>
 
                             <TableRow
-                                android1:id="@+id/tableRow3"
-                                android1:layout_width="wrap_content"
-                                android1:layout_height="wrap_content" >
+                                android:id="@+id/tableRow3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
 
                                 <TextView
-                                    android1:id="@+id/dayTimeHourlyUsageTextView"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:text="dayTimeHourlyUsage" />
+                                    android:id="@+id/dayTimeHourlyUsageTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="dayTimeHourlyUsage" />
 
                                 <EditText
-                                    android1:id="@+id/dayTimeHourlyUsageEditText"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:editable="false"
-                                    android1:ems="10"
-                                    android1:text="1" />
+                                    android:id="@+id/dayTimeHourlyUsageEditText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:ems="10"
+                                    android:text="1" />
                             </TableRow>
 
                             <TableRow
-                                android1:id="@+id/tableRow4"
-                                android1:layout_width="wrap_content"
-                                android1:layout_height="wrap_content" >
+                                android:id="@+id/tableRow4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
 
                                 <TextView
-                                    android1:id="@+id/tariffTextView"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:text="Tariff" />
+                                    android:id="@+id/tariffTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tariff" />
 
                                 <EditText
-                                    android1:id="@+id/tariffEditText"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:editable="false"
-                                    android1:ems="10"
-                                    android1:text="0.1941" />
+                                    android:id="@+id/tariffEditText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:ems="10"
+                                    android:text="0.1941" />
                             </TableRow>
 
                             <TableRow
-                                android1:id="@+id/TableRow01"
-                                android1:layout_width="wrap_content"
-                                android1:layout_height="wrap_content" >
+                                android:id="@+id/TableRow01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
 
                                 <TextView
-                                    android1:id="@+id/feedInFeeTextView"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:text="FeedInFee" />
+                                    android:id="@+id/feedInFeeTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="FeedInFee" />
 
                                 <EditText
-                                    android1:id="@+id/feedInFeeEditText"
-                                    android1:layout_width="wrap_content"
-                                    android1:layout_height="wrap_content"
-                                    android1:editable="false"
-                                    android1:ems="10"
-                                    android1:text="0.05" />
+                                    android:id="@+id/feedInFeeEditText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:editable="false"
+                                    android:ems="10"
+                                    android:text="0.05" />
                             </TableRow>
                         </TableLayout>
 
                         <Button
-                            android1:id="@+id/calculatorCheckBtn"
-                            android1:layout_width="match_parent"
-                            android1:layout_height="wrap_content"
-                            android1:text="Check" />
+                            android:id="@+id/calculatorCheckBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Check" />
 
                         <TextView
-                            android1:id="@+id/calculatorReulstTextView"
-                            android1:layout_width="match_parent"
-                            android1:layout_height="102dp" />
+                            android:id="@+id/calculatorReulstTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="102dp" />
+					</LinearLayout>
 
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android1:id="@+id/tab2"
-                    android1:layout_width="match_parent"
-                    android1:layout_height="match_parent" >
-
-                    <TextView
-                        android1:id="@+id/textView1"
-                        android1:layout_width="wrap_content"
-                        android1:layout_height="wrap_content"
-                        android1:text="TextView" />
-
-                </LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
-
-</RelativeLayout>
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:id="@+id/tab2"
+					android:gravity="center"
+					android:orientation="vertical"
+				>
+					<TextView
+                            android:id="@+id/instructionTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Instruction" />
+				</LinearLayout>
+				
+			</FrameLayout>
+		</LinearLayout>
+	</TabHost>
+</LinearLayout>
