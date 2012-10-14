@@ -8,6 +8,7 @@ import javax.servlet.http.*;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
+import com.inb372.data.DataTier;
 
 public class CalculatorActivity extends HttpServlet {
 	 
@@ -43,6 +44,9 @@ public class CalculatorActivity extends HttpServlet {
     	double feedInFee = Double.parseDouble(request.getParameter("feedInFee"));
     	String savingsInterval = request.getParameter("savingsInterval");
     	double systemSizeKw;
+    	
+    	//Store calculation in DataStore
+    	//DataTier.AddToDataStore(kind, key, PropertyName, obj)
     
     		//systemSizeKw = BusinessTier.calculateMinKw(savings, avgDailyHoursSun, dayTimeHourlyUsage, tariff, feedInFee);
     		systemSizeKw = BusinessTier.calculateMinKwForSavingInterval(savings, savingsInterval, avgDailyHoursSun, dayTimeHourlyUsage, tariff, feedInFee);
