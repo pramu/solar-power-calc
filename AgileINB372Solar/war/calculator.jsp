@@ -25,7 +25,7 @@
 		</div>
 		
 		<div id="content">
-			<form name="calculator" method="post" action="/calculatorAct"
+			<!-- <form name="calculator" method="post" action="/calculatorAct"
 				id="calculator" onsubmit="return Validate()" onreset="resetBtn()">
 
 				<table id="calculatorTable">
@@ -64,16 +64,16 @@
 						</span></td>
 					</tr>
 				</table>
-				<!-- End calculatorTable -->
+				End calculatorTable
 
 
 				<div id="buttons">
 					<input type="submit" id="calculatorSubmit" value="Submit" /> <input
 						type="submit" id="calculatorReset" value="Reset" />
 				</div>
-				<!-- End buttons -->
+				End buttons
 			</form>
-			<!-- End calculator -->
+			End calculator -->
 		</div>
 		<!-- End content -->
 

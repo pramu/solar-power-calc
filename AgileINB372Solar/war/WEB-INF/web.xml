@@ -11,8 +11,6 @@
     <url-pattern>/agileinb372solar/greet</url-pattern>
   </servlet-mapping>
   
-  
-  
   <servlet>
         <servlet-name>homeAct</servlet-name>
         <servlet-class>com.inb372.project.HomeActivity</servlet-class>

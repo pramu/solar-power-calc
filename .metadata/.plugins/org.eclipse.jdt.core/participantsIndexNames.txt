@@ -1,0 +1,3 @@
+INDEX VERSION 1.126
+C:\Users\Pramu\Documents\GitHub\solar-power-calc\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3147866814.index
+\AgileINB372Solar\src
