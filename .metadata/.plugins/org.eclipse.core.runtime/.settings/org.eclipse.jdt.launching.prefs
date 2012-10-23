@@ -1,0 +1,4 @@
+PREF_VM_INSTALL_SYSTEM_PROPERTY.org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType.1350197901323.java.specification.version=1.7
+PREF_VM_INSTALL_SYSTEM_PROPERTY.org.eclipse.jdt.internal.launching.macosx.MacOSXType.com.apple.javajdk16.java.specification.version=1.6
+eclipse.preferences.version=1
+org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1350197901323" defaultVMConnector\="">\r\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n<vm id\="1350197901323" name\="eclipse" path\="E\:\\AProMore\\eclipse"/>\r\n</vmType>\r\n</vmSettings>\r\n

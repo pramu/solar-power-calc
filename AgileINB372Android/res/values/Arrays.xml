@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string-array name ="intervalArray">
+        <item>YEARLY</item>
+        <item>WEEKLY</item>
+        <item>FORTNIGHTLY</item>
+        <item>MONTHLY</item>
+        <item>SIXMONTHS</item>
+        
+    </string-array>
+    
+</resources>
+

@@ -1,0 +1,2 @@
+serviceClass: com.inb372.project.client.GreetingService
+path: CF57F29E058617D4D2B4FF22D4B9EB84.gwt.rpc
