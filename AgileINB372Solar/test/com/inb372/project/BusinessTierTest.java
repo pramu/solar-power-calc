@@ -109,6 +109,11 @@ public class BusinessTierTest {
 		assertEquals(0.01, BusinessTier.calculateMinKwForSavingInterval(1,"WEEK",4.5,1,0.1941,0.05), 0.01);
 	}
 	
+	@Test(expected=NullPointerException.class)
+	public void calculateNullWeek()
+	{
+		assertEquals(0.01, BusinessTier.calculateMinKwForSavingInterval(1,null,4.5,1,0.1941,0.05), 0.01);
+	}
 	
 	
 	@Test
@@ -129,5 +134,53 @@ public class BusinessTierTest {
 	{
 		assertEquals(7, BusinessTier.numberOfMonthsToBreakEven(250.0, 3.2, 4.5, 1.0, 0.1941, 0.05), 0.01);
 	}
+
+	@Test(expected=NullPointerException.class)
+	public void nullGetSystemID()
+	{
+		assertEquals(7, BusinessTier.GetSystemID(1), 0.01);
+	}
 	
+	@Test(expected=NullPointerException.class)
+	public void nullGetPanelListSize() {
+		assertEquals(7, BusinessTier.GetPanelListSize(), 0.01);
+		
+	}
+	
+	@Test(expected=NullPointerException.class)
+	public void nullGetPanelID() {
+		assertEquals(7, BusinessTier.GetPanelID(1), 0.01);
+		
+	}
+	
+	@Test(expected=NullPointerException.class)
+	public void nullGetPanelSystemID() {	
+		assertEquals("1", BusinessTier.GetPanelSystemID(1));
+		
+	}
+	
+	@Test(expected=NullPointerException.class)
+	public void nullGetPanelPrice() {		
+		assertEquals("1", BusinessTier.GetPanelPrice(1));
+		
+	}
+	
+	@Test(expected=NullPointerException.class)
+	public void nullGetPanelEfficency() {	
+		assertEquals("1", BusinessTier.GetPanelEfficency(1));
+		
+	}
+	
+	@Test(expected=NullPointerException.class)
+	public void nullGetPanelSize() {
+		assertEquals("1", BusinessTier.GetPanelSize(1));
+		
+	}
+	
+	@Test(expected=NullPointerException.class)
+	public void nullGetPanelQuentity() {
+		assertEquals("1", BusinessTier.GetPanelQuentity(1));
+		
+	}
+
 }

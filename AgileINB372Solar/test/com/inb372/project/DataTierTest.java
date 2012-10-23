@@ -88,15 +88,46 @@ public class DataTierTest {
 	}
 	
 	@Test
-	public void addSinglePanelToDataStoreInvalidKW() {
+	public void addSinglePanelToDataStoreInvalidKWNegative() {
 		assertTrue(DataTier.AddSinglePanel(-1,99));
+	}
+	@Test
+	public void addSinglePanelToDataStoreInvalidKWZero() {
+
 		assertTrue(DataTier.AddSinglePanel(0,99));
+	}
+	@Test
+	public void addSinglePanelToDataStoreInvalidKWLowerBound() {
+		assertTrue(DataTier.AddSinglePanel(0.01,99));
+	}
+	@Test
+	public void addSinglePanelToDataStoreInvalidKWHigh() {
+		assertTrue(DataTier.AddSinglePanel(10000,99));
 	}
 	
 	@Test
-	public void addSinglePanelToDataStoreInvalidPanelEfficiency() {
+	public void addSinglePanelToDataStoreInvalidPanelEfficiencyOver100() {
 		assertTrue(DataTier.AddSinglePanel(1.5,101));
+	}
+	
+	@Test
+	public void addSinglePanelToDataStoreInvalidPanelEfficiencyUpperBound() {
+		assertTrue(DataTier.AddSinglePanel(1.5,99));
+	}
+	
+	@Test
+	public void addSinglePanelToDataStoreInvalidPanelEfficiencyLowerBound() {
+		assertTrue(DataTier.AddSinglePanel(1.5,1));
+	}
+	
+	@Test
+	public void addSinglePanelToDataStoreInvalidPanelEfficiencyZero() {
 		assertTrue(DataTier.AddSinglePanel(1.5,0));
+	}
+	
+	@Test
+	public void addSinglePanelToDataStoreInvalidPanelEfficiencyNegative() {
+
 		assertTrue(DataTier.AddSinglePanel(1.5,-1));
 	}
 	
